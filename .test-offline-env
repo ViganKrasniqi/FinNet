@@ -1,0 +1,5 @@
+# Below are the environment variables that will be inecjected
+# Into cucumber when running 'npm run test:offline'
+GraphqlLambdaFunctionQualifiedArn=""
+ServiceEndpoint="http://localhost:3000/dev"
+ServerlessDeploymentBucketName=""

@@ -1,0 +1,51 @@
+{
+  "name": "qa-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "dev": "serverless offline start --noAuth",
+    "generate:nexus": "ts-node --transpile-only src/modules/gql-model",
+    "test:unit": "mocha --require ts-node/register 'tests/**/*.test.ts'",
+    "test:stage": "ts-node scripts/exportEnv.ts --stage $npm_config_stage && dotenv -e ./.test-stage-env -- cucumber-js -p default",
+    "test:offline": "ts-node scripts/runIntegTestsOffline.ts",
+    "exec:offline": "dotenv -e ./.test-offline-env -- cucumber-js -p default"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@aws-sdk/types": "^3.40.0",
+    "@cucumber/cucumber": "^8.0.0-rc.1",
+    "@serverless/typescript": "^2.70.0",
+    "@types/chai": "^4.3.0",
+    "@types/cucumber": "^7.0.0",
+    "@types/mocha": "^9.0.0",
+    "aws-lambda": "^1.0.7",
+    "aws-sdk": "^2.1047.0",
+    "chai": "^4.3.4",
+    "command-line-args": "^5.2.0",
+    "cucumber-tsflow": "^4.0.0-preview.7",
+    "cz-conventional-changelog": "^3.3.0",
+    "dotenv-cli": "^4.1.1",
+    "eslint": "^7.32.0",
+    "mocha": "^9.1.3",
+    "node-yaml-config": "^1.0.0",
+    "pino-pretty": "^7.0.1",
+    "prettier": "^2.5.0",
+    "serverless-offline": "^8.3.1",
+    "serverless-offline-lambda": "^1.0.6",
+    "serverless-webpack": "^5.6.0",
+    "ts-loader": "^9.2.6",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.4",
+    "webpack": "^5.64.4",
+    "webpack-node-externals": "^3.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

@@ -1,0 +1,4 @@
+/schema.graphql
+/src/generated
+/node_modules
+/.serverless
