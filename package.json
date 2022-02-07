@@ -19,6 +19,7 @@
     "@aws-sdk/types": "^3.40.0",
     "@cucumber/cucumber": "^8.0.0-rc.1",
     "@serverless/typescript": "^2.70.0",
+    "@types/aws-lambda": "^8.10.92",
     "@types/chai": "^4.3.0",
     "@types/cucumber": "^7.0.0",
     "@types/mocha": "^9.0.0",
@@ -47,5 +48,9 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "dependencies": {
+    "pino": "^7.6.4",
+    "serverless": "^2.72.2"
   }
 }

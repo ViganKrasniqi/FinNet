@@ -45,7 +45,7 @@ written in plain language.
 
 ```sh
 
-npm -g install serverless
+npm -g install serverless@2.72.2
 
 ```
 
