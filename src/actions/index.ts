@@ -1,1 +1,1 @@
-export * from './example.action';
+export * from './example';

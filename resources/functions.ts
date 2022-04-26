@@ -1,6 +1,6 @@
 export const functions = {
   functionName: {
-    handler: './src/actions/example.action.loginAction',
+    handler: './src/actions/example.loginAction',
     events: [
       {
         httpApi: {
@@ -11,7 +11,7 @@ export const functions = {
     ],
   },
   functionName1: {
-    handler: './src/actions/example.action.sumAction',
+    handler: './src/actions/example.sumAction',
     events: [
       {
         httpApi: {
